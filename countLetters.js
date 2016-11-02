@@ -3,7 +3,7 @@
 var string = process.argv.slice(2);
 
 if (!string[0]) console.log("Please provide some text!");
-else countLetters(string);
+else console.log(countLetters(string));
 
 function countLetters(string) {
   var countStats = new Object();
@@ -11,7 +11,7 @@ function countLetters(string) {
     if (countStats[char]) countStats[char]++;
     else countStats[char] = 1;
   });
-  console.log(countStats);
+  return countStats;
 }
 
 // console.log(countLetters(string));
